@@ -3,8 +3,7 @@ actions:
     build:
       runs_on: "['ubuntu-20.04']"
       packager_image: veracode/scm-packaging:3.0.0
-      predependency_command: |
-        gem pristine --all --only-executables\
+      predependency_command: 
         
   veracode_sca_scan:
     build:
