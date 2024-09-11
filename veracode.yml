@@ -1,7 +1,4 @@
 actions:
-  ruby:
-    version: 3.3.3
-    bundle: 2.4.6
   veracode_static_scan:
     build:
       runs_on: "['ubuntu-20.04']"
