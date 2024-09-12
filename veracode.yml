@@ -1,8 +1,8 @@
 actions:
   veracode_static_scan:
     build:
-      runs_on: "['ubuntu-latest']"
-      packager_image: veracode/scm-packaging:3.0.0
+      runs_on: "['windows-latest']"
+      packager_image: 
       predependency_command: 
         
   veracode_sca_scan:
