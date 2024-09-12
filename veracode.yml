@@ -1,16 +1,3 @@
-actions:
-  veracode_static_scan:
-    build:
-      runs_on: "['ubuntu-latest']"
-      packager_image: veracode/scm-packaging:3.0.0
-      predependency_command: 
-        
-  veracode_sca_scan:
-    build:
-      runs_on:
-      packager_image:
-      #predependency_command: |
-
 veracode_static_scan:
   push:
     trigger: false
@@ -21,7 +8,7 @@ veracode_static_scan:
       - '*'
     branches_to_exclude:
   pull_request:
-    trigger: true
+    trigger: false
     action:
       - opened
       - synchronize
@@ -47,7 +34,7 @@ veracode_static_scan:
   # If the trigger is set to true, a scan is triggered when you create an issue containing the commands value or add a comment containing the commands value to an issue.
   # Syntax to be used - COMMANDS_VALUE [branch: BRANCH_NAME]
   issues:
-    trigger: false
+    trigger: true
     commands:
       - "Veracode Static Scan"
 
@@ -61,7 +48,7 @@ veracode_sca_scan:
       - '*'
     branches_to_exclude:
   pull_request:
-    trigger: true
+    trigger: false
     action:
       - opened
       - synchronize
@@ -74,7 +61,7 @@ veracode_sca_scan:
   # If the trigger is set to true, a scan is triggered when you create an issue containing the commands value or add a comment containing the commands value to an issue.
   # Syntax to be used - COMMANDS_VALUE [branch: BRANCH_NAME]
   issues:
-    trigger: false
+    trigger: true
     commands:
       - "Veracode SCA Scan"
 
@@ -103,6 +90,6 @@ veracode_iac_secrets_scan:
   # If the trigger is set to true, a scan is triggered when you create an issue containing the commands value or add a comment containing the commands value to an issue.
   # Syntax to be used - COMMANDS_VALUE [branch: BRANCH_NAME]
   issues:
-    trigger: false
+    trigger: true
     commands:
       - "Veracode IAC Scan"
