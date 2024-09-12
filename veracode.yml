@@ -1,7 +1,7 @@
 actions:
   veracode_static_scan:
     build:
-      runs_on: "['ubuntu-20.04']"
+      runs_on: "['windows-latest']"
       packager_image: veracode/scm-packaging:3.0.0
       predependency_command: 
         
